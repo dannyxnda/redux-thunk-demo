@@ -14,12 +14,13 @@ const P2 = ({ loading, city, data }) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
+  const { loading, data, city, error } = state.weather;
+
   return {
-    loading: state.loading,
-    data: state.data,
-    city: state.city,
-    error: state.error,
+    loading: loading,
+    data: data,
+    city: city,
+    error: error,
   };
 };
 
