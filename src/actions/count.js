@@ -16,6 +16,6 @@ export const setSuccess = number => ({
 
 export const setNumber = number => dispatch => {
   dispatch(requestSet(number));
-  //   return setTimeout(() => dispatch(setSuccess({ number: number })), 3000);
-  return dispatch(setSuccess({ number: number }));
+  return setTimeout(() => dispatch(setSuccess({ number: number })), 3000);
+  // return dispatch(setSuccess({ number: number }));
 };

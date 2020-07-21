@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 import { setNumber } from '../actions/count';
 
 const Count = ({ loading, data, setNumber }) => {
-  React.useEffect(() => {
-    console.log(data);
-  }, [loading]);
+  React.useEffect(() => console.log('aaaaa'));
+
   return (
     <div>
       <h1>SET Number</h1>
-      <div>{loading}</div>
+      <div>{loading && <span>loading...</span>}</div>
       <div>{data.number}</div>
       <button onClick={() => setNumber(1)}>1</button>
       <button onClick={() => setNumber(5)}>5</button>
